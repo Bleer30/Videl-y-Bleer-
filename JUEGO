@@ -9,10 +9,9 @@ namespace Calculadora
     {
         static void Main(string[] args)
         {
-           //char opcion;
-           string continuar="";
+            //char opcion;
+            string continuar="";
             int opcion1=0;
-           do {
               Console.WriteLine("Bienvenidos a mi casa:");
               Console.WriteLine("1. Eres el padre");
               Console.WriteLine("2. Eres el hijo");
@@ -21,20 +20,25 @@ namespace Calculadora
               
             switch(opcion1){
                 case 1: 
-                  int respuesta1;
+                  Console.Clear();
+                  int resp1;
+                  int resp2;
                   Console.WriteLine("Entras a la casa y encuentras a tu hijo golpeando una ventana");
                   Console.WriteLine("Que haces?");
                   Console.WriteLine("1:lo golpeas");
                   Console.WriteLine("2:lo agarras para que no se lastime");
-                  respuesta1= int.Parse(Console.ReadLine());
-                  if (respuesta1==1){
+                  resp1= int.Parse(Console.ReadLine());
+                  if (resp1==1){
                     Console.WriteLine("Se fue a llorar a la habitacion");  
+                    Console.WriteLine("Que haces?");
+                    Console.WriteLine("1:lo sigues para hablar con el");
+                    Console.WriteLine("2:dejas que se le pase");
                   }
-                  if (respuesta1==2){
+                  if (resp1==2){
                       Console.WriteLine("Se te suelta, golpea la ventana la cual se quiebra y comienza a sangrar");
-                  }
-                  if (respuesta1 ^= 1 && respuesta1 ^= 2){
-                       Console.WriteLine("no hagas trampas");
+                      Console.WriteLine("Que haces?");
+                      Console.WriteLine("1:intes ayudarlo limpiando la herida");
+                      Console.WriteLine("2:lo llevas al hospital");
                   }
                   Console.Clear();
                   break;
@@ -65,8 +69,6 @@ namespace Calculadora
                     Console.Clear();
                     break;
             }//switch
-           }//Fin del do
-           while(continuar != "n");
         }//Fin del main
         //Console.ReadLine();//Necesario
     }//Fin de la class
