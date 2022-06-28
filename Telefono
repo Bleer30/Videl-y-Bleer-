@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+public class HelloWorld
+{
+    public static bool verificar(string tel)
+    {
+        bool a = false;
+        if (tel.Length == 14){
+            if(tel.Contains("(") && tel.Contains(")") && tel.Contains(" ")){
+              a = true;  
+            }
+        }
+        else
+        {
+            a = false;
+        }
+        return (a);
+    }
+
+    public static void Main(string[] args)
+    {
+        string tel = "";
+        Console.WriteLine("Digite un numero de celular");
+        Console.WriteLine("(123) 456-7890");
+        tel = Console.ReadLine();
+         Console.WriteLine("lo que dijitaste es un numero de telefono:" + verificar(tel));
+    }
+}
