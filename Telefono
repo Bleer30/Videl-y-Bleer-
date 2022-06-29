@@ -10,7 +10,7 @@ public class HelloWorld
     {
         bool a = false;
         if (tel.Length == 14){
-            if(tel.Contains("(") && tel.Contains(")") && tel.Contains(" ")){
+            if(tel.Contains("(") && tel.Contains(")") && tel.Contains(" ") && tel.Contains("-")){
               a = true;  
             }
         }
@@ -27,6 +27,6 @@ public class HelloWorld
         Console.WriteLine("Digite un numero de celular");
         Console.WriteLine("(123) 456-7890");
         tel = Console.ReadLine();
-         Console.WriteLine("lo que dijitaste es un numero de telefono:" + verificar(tel));
+        Console.WriteLine("lo que dijitaste es un numero de telefono:" + verificar(tel));
     }
 }
