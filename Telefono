@@ -1,4 +1,5 @@
 using System;
+using System.Text.RegularExpressions;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,9 @@ public class HelloWorld
         }
         else
         {
+            a = false;
+        }
+        if (Regex.IsMatch(tel,@"^[a-z]+$")){
             a = false;
         }
         return (a);
